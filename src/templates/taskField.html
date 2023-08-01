@@ -1,0 +1,132 @@
+<header class = "container header">
+    <div class="board-header">
+        <p id = "kanban-board" >Kanban Board</p>
+    </div>
+    <div class="user-header">          
+        <button id = "btn-avatar" onclick="myFunction_avatar()" class="avatar"> 
+            <img src="../files/user-avatar.jpg" alt="user-avatar" class = "avatar-img">
+            <img id = "img_down" src="../files/arrow-down.svg" alt="arrow-down" class = "avatar-img_choose">                
+        </button> 
+        <div id="myDropdown-avatar" class="div-avatar hide">
+            <ul class = "ul-avatar "> 
+                <li><button onclick="myFunction_account()">My account</button></li>
+                <li><button onclick="myFunction_tasks()">My tasks</button></li>
+                <li><button onclick="myFunction_logout()">Log out</button></li>
+            </ul>   
+        </div>     
+    </div>
+</header>
+
+<div id = "my-account" class="container hide">
+    <div class = "account-task hide">
+        <div class = "account-task-div" >
+            <p>Main page – performance issues</p>
+            <p id = "content-account"></p>
+        </div>  
+        <div class = "div-right">
+            <button onclick="myFunction_exit()">
+                <img src="../files/Line 3.png" alt="exit">
+            </button>    
+        </div>  
+     </div>
+</div>
+
+<div id = "my-tasks" class="container hide">
+    <div class = "account-task hide">
+        <div class = "account-task-div">
+            <p>List of issues</p>
+            <p id = "content-tasks"></p>
+        </div>  
+        <div class = "div-right">
+            <button onclick="myFunction_exit()">
+                <img src="../files/Line 3.png" alt="exit">
+            </button>    
+        </div>  
+     </div>
+</div>
+
+<div id = "my-main" class="container main">
+    <!--task for backlog-->
+    <div class="task backlog">
+        <p class="font-task">Backlog</p>
+        <!--список задач-->
+        <div class="add-task-backlog">
+            <ul class = "ul-task-backlog"> </ul>   
+        </div>
+        <!--кнопка добавления задач-->
+        <div class="dropdown">
+          <button id = "btn-backlog" onclick="myFunction_backlog()" class="dropbtn"> 
+            <img src="../files/add-card.svg" alt="add-card">   
+            Add card
+          </button>      
+          <input type = "text" class="input_add_task font-task hide">
+          <button onclick="submit_task()" class = "btn-task_submit hide">
+            submit
+          </button>                  
+        </div>  
+    </div>
+    <!--task for ready-->
+    <div class="task ready">
+        <p class="font-task">Ready</p>
+         <!--список задач-->
+        <div class="add-task-ready">
+            <ul class = "ul-task-ready"> </ul>   
+        </div>
+        <!--кнопка добавления задач-->
+        <div class="dropdown">
+          <button id = "btn-ready" onclick="myFunction_ready()" class="dropbtn">
+            <img src="../files/add-card.svg" alt="add-card"> 
+            Add card
+          </button>             
+          <div id="myDropdown-ready" class="dropdown-content">
+           <ul class = "ul-ready"> </ul>
+           <!--<select class = "ul-ready"> </select>-->   
+          </div>
+        </div>  
+    </div>
+    <!--task for inprogress-->
+    <div class="task inprogress">
+        <p class="font-task">In Progress</p>
+        <!--список задач-->
+        <div class="add-task-inprogress">
+            <ul class = "ul-task-inprogress"> </ul>  
+        </div>
+        <!--кнопка добавления задач-->
+        <div class="dropdown">
+          <button id = "btn-inprogress" onclick="myFunction_inprogress()" class="dropbtn">
+            <img src="../files/add-card.svg" alt="add-card"> 
+            Add card
+          </button>             
+          <div id="myDropdown-inprogress" class="dropdown-content">
+            <ul class = "ul-progress"> </ul>   
+          </div>
+        </div>  
+    </div>
+    <!--task for finished-->
+    <div class="task finished">
+        <p class="font-task">Finished</p>  
+         <!--список задач-->
+        <div class="add-task-finished">
+            <ul class = "ul-task-finished"> </ul>  
+        </div>
+        <!--кнопка добавления задач-->
+        <div class="dropdown">
+          <button id = "btn-finished" onclick="myFunction_finished()" class="dropbtn">
+            <img src="../files/add-card.svg" alt="add-card"> 
+            Add card
+          </button>             
+          <div id="myDropdown-finished" class="dropdown-content">
+            <ul class = "ul-finished"> </ul>   
+          </div>
+        </div>  
+    </div>
+</div>
+<footer class = "container footer">
+    <div class="task-footer">
+        <p class="task-footer__active">Active tasks:</p>
+        <p class="task-footer__finished">Finished tasks:</p>
+    </div>
+    <div class="presentation">
+        <p>Kanban board by Maksim Zoteev, 2023</p>
+    </div>
+</footer>

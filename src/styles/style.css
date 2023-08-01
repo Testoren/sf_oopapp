@@ -1,0 +1,326 @@
+:root {
+  --color-gray:#EBECF0;
+  --color-gray_dark:#5E6C84;
+  --color-gray_add:#aab3c4;
+  --color-blue_dark:#0067A3;
+}
+ 
+#app-login-btn {
+  width: 160px;
+}
+
+#content{
+  flex-wrap:wrap;  
+  background-color: #0079BF;
+  padding-bottom: 32px; 
+  text-align:center;
+  width: 100vw;
+  height: 100vh;
+}
+ 
+.task{
+  display: inline-block;  
+  vertical-align: top;
+  background-color: var(--color-gray);
+  width: 282px;
+  border-radius: 10px; 
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  text-align:left;
+  max-height: 539px;
+  padding: 12px 0px; 
+}
+ 
+.backlog{
+  overflow: auto;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-blue_dark);
+  color: white;
+  height: 55px;
+}
+ 
+.header{
+  box-sizing: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-blue_dark);
+  color: white;  
+  height: 55px; 
+}
+ 
+.board-header{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33px;
+  color: #FFFFFF;
+}
+ 
+.main{
+  padding-top: 20px;
+}
+
+
+ 
+.li{
+  font-size: 18px;
+  list-style: none;
+  word-wrap: break-word;
+  border-radius: 5px;
+  background: #FFF;
+  margin-top: 15px;
+  margin-left: -20px;
+  margin-right: 10px;
+  color: black;
+  min-height: 40px;
+  padding: 7px 8px;
+}
+ 
+.input_add_task{
+  border-radius: 5px;
+  background: #FFF;
+  height: 40px;
+  min-width: 260px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align:left;
+  border: none; 
+  outline: none;
+}
+
+.btn-task_submit{
+  background: #0079BF;
+  border-radius: 5px;
+  height: 29px;
+  width: 102px;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  border: none;
+}
+
+.btn-task_submit:hover, .btn-task_submit:focus {
+  background-color: rgb(104, 183, 214); 
+}
+
+.task-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+}
+ 
+.font-task{
+  margin-left: 12px;
+  color: black;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;     
+}
+ 
+/* Кнопка выпадающего списка */
+.dropbtn, .dropbtn_disable{
+  border: none;
+  color:var(--color-gray_dark);
+  flex-direction: row;
+  align-items: flex-end;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  height:30px;  
+  display:inline-block;
+  border-radius: 10px;  
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+.dropbtn{
+  cursor: inherit;
+}
+
+.dropbtn_disable{
+  cursor:none;
+  background-color: var(--color-gray); 
+  color: var(--color-gray_add);
+}
+
+/* Кнопка выпадающего списка */
+.btn-list{
+  border: none;
+  color:black;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  height:100%;
+  display:inline-block;
+  width:100%;  
+  background-color: white;  
+  text-align:left;
+}
+ 
+/* Кнопка выпадающего меню при наведении и фокусировке */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white; 
+}
+ 
+/* Кнопка выпадающего меню при наведении и фокусировке */
+.dropbtn_disable:hover, .dropbtn_disable:focus {
+  background-color:  var(--color-gray);
+}
+ 
+.btn-list:hover, .btn-list:focus{
+  background-color: var(--color-gray_dark);
+  color:white;  
+}
+ 
+.task-footer__active{
+  margin-right: 20px;
+}
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+ 
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+ 
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+ 
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+ 
+.avatar{
+  background-color:var(--color-blue_dark); 
+  margin-top: -10px;  
+  border: none;    
+}
+
+.avatar-img{
+  border-radius: 100px; /* Радиус скругления */ 
+}
+
+.ul-avatar li button{
+  list-style: none; 
+  border: none;
+  color:black;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  height:100%;
+  display:inline-block; 
+  background-color: white;   
+  margin-left: -20px;
+  margin-right: 10px; 
+  padding-top: 10px;
+}
+
+.div-avatar{
+  background-color:white; 
+  border-radius: 10px; 
+  z-index: 100;
+  position: absolute;
+  margin-left: -40px;
+  text-align:left;   
+  border: solid 1px gray;
+}
+
+.div-avatar button:hover{
+  color :#0067A3;
+}
+
+.avatar-img_choose:hover{
+  opacity: 0.6;
+}
+
+.account-task {
+  background-color:white; 
+  border-radius: 10px; 
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align:left;   
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.account-task-div{
+  padding-right: 30%;
+}
+
+.account-task button{
+  border: none;
+  background-color: white;
+}
+
+.account-task button:hover{
+  box-shadow: 5px 5px 5px black;
+}
+
+.div-right{
+  padding-right: 5px; 
+}
+
+#content{
+  color:white;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+/* Показать выпадающее меню */
+.show {
+  display:block; 
+  border-radius: 5px;
+}
+
+.hide{
+  display: none;
+}
+
+p {
+  margin: 0;
+}
